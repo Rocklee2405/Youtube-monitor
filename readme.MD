@@ -20,7 +20,7 @@ options = {
         }
 ```
 
-Change channel url you want to monitor:
+- Change channel url you want to monitor
 
 ```
 version: '3'
@@ -36,7 +36,7 @@ services:
       LINK: https://www.youtube.com/user/BBCVietnamese/videos 
 ```
 
-Run 
+- Run 
 
 ```
 docker-compose up -d
