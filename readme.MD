@@ -1,12 +1,15 @@
 # Monitor bbc channel youtube
+
 ```
 Auto download audio from bbc channel
 ```
 
 ## Usage
+
 Video on youtube have 3 format: mp4, m4a and webm.
 Change format you want download in option.
-Option
+Option:
+
 ```
 options = {
             'continue' : 'continue',
@@ -18,7 +21,24 @@ options = {
         }
 ```
 
+Change channel url you want to monitor:
+
+```
+version: '3'
+services:
+  bbc:
+    image: bbc-monitor
+    build: .
+    volumes:
+      - ./bbc.py:/bbc.py
+      - ./main.py:/main.py
+    environment:
+      TZ: Asia/Saigon
+      LINK: https://www.youtube.com/user/BBCVietnamese/videos 
+```
+
 Run 
+
 ```
 docker-compose up -d
 ```
